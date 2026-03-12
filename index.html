@@ -1,13 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-<title>Cukrárna</title>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Cukrárna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<h1>Nadpis</h1>
-<p>domácí dorty a zákusky</p>
-</body>
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Moje Cukrárna</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">O nás</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#team">Tým</a></li>
+                    <li><a href="#reviews">Recenze</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="container hero-container">
+            <h2>Sladké dobroty pro každý den</h2>
+            <p>Objevte naše čerstvé dorty, dezerty a pečivo. Ručně vyráběné s láskou.</p>
+            <a href="#menu" class="btn-primary">Prohlédnout nabídku</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>O nás</h2>
+            <p>Jsme rodinná cukrárna s vášní pro sladkosti a kvalitu. Naše produkty jsou vyráběné z čerstvých surovin a s láskou k detailu.</p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Historie</h3>
+                    <p>Naše cukrárna funguje již více než 20 let. Každý dort je výsledkem tradice a zkušeností.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Filozofie</h3>
+                    <p>Kvalita, čerstvost a spokojenost zákazníků jsou naším motorem. Věříme v poctivou práci a radost z každého sousta.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Ingredience</h3>
+                    <p>Používáme jen ty nejlepší suroviny – čokoládu, ovoce, máslo a další čerstvé komponenty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Naše dorty a dezerty</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="obrazek1.jpg" alt="Čokoládový dort">
+                    <h3>Čokoládový dort</h3>
+                    <p>Hustá čokoládová pěna a čerstvé ovoce navrchu.</p>
+                </div>
+                <div class="card">
+                    <img src="obrazek2.jpg" alt="Ovocný dort">
+                    <h3>Ovocný dort</h3>
+                    <p>Sezonní ovoce a jemný piškot – ideální pro oslavy.</p>
+                </div>
+                <div class="card">
+                    <img src="obrazek3.jpg" alt="Vanilkový dort">
+                    <h3>Vanilkový dort</h3>
+                    <p>Lehký a nadýchaný dort s vanilkovým krémem a drobným zdobením.</p>
+                </div>
+                <div class="card">
+                    <img src="obrazek4.jpg" alt="Red Velvet">
+                    <h3>Red Velvet</h3>
+                    <p>Elegantní červený dort s krémovým sýrovým toppingem.</p>
+                </div>
+                <div class="card">
+                    <img src="obrazek5.jpg" alt="Cheesecake">
+                    <h3>Cheesecake</h3>
+                    <p>Klasický s lehkou citronovou chutí a křupavým korpusem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Náš tým cukrářů</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="cukrar1.jpg" alt="Jana Nováková">
+                    <h3>Jana Nováková</h3>
+                    <p>Hlavní cukrářka – kreativní design dortů a dezertů.</p>
+                </div>
+                <div class="team-member">
+                    <img src="cukrar2.jpg" alt="Petr Svoboda">
+                    <h3>Petr Svoboda</h3>
+                    <p>Šéfkuchař sladkého – zodpovědný za chuť a kvalitu.</p>
+                </div>
+                <div class="team-member">
+                    <img src="cukrar3.jpg" alt="Klára Dvořáková">
+                    <h3>Klára Dvořáková</h3>
+                    <p>Dortová dekorace – specialistka na detail a estetiku.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Co o nás říkají zákazníci</h2>
+            <div class="reviews-grid">
+                <div class="review">
+                    <p>"Nejlepší dorty, které jsem kdy ochutnal! Vždy čerstvé a krásně vypadají." – <strong>Markéta</strong></p>
+                </div>
+                <div class="review">
+                    <p>"Cukrárna s duší, kvalita a chuť je na prvním místě." – <strong>Tomáš</strong></p>
+                </div>
+                <div class="review">
+                    <p>"Milujeme jejich čokoládový dort. Perfektní pro narozeniny!" – <strong>Lucie</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontaktujte nás</h2>
+            <p>Adresa: Ulice 123, Město</p>
+            <p>Telefon: +420 123 456 789</p>
+            <p>Email: info@mojecukrarna.cz</p>
+            <div class="map">
+                <!-- Místo pro vložení Google Maps iframe -->
+                <iframe src="https://maps.google.com/maps?q=Praha&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="width:100%;height:300px;border:0;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 Moje Cukrárna. Všechna práva vyhrazena.</p>
+            <div class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
