@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Celá nabídka</title>
-<link rel="stylesheet" href="style.css">
 <style>
 body{
   font-family: Arial, sans-serif;
@@ -21,18 +20,17 @@ header{
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  background:#f5f0e6; /* lehce tmavší než zbytek stránky */
+  background:#f5f0e6;
   color:#5a3e36;
   padding:15px 30px;
   box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
-
 header .company-name{
   font-weight:700;
   font-size:1.5rem;
 }
 
-/* nadpis hlavní sekce */
+/* hlavní nadpis */
 .main-title{
   text-align:center;
   font-size:2.5rem;
@@ -41,33 +39,31 @@ header .company-name{
   color:#5a3e36;
 }
 
-/* kontejner pro tlačítka kategorií */
+/* hlavní grid pro všechny tlačítka */
 .categories-container{
   max-width:1200px;
   margin:0 auto 50px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(4,1fr); /* první řada 4 tlačítka */
+  grid-template-columns:repeat(4,1fr);
   gap:30px;
   justify-items:center;
 }
 
-/* spodní řada 3 tlačítka uprostřed */
-.categories-container .row2{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  justify-content:center;
-  margin-top:30px;
+/* placeholder pro spodní řadu (prázdné místo vlevo a vpravo) */
+.categories-container::before,
+.categories-container::after{
+  content:"";
+  display:block;
 }
 
-/* velká tlačítka kategorií */
+/* velká tlačítka */
 .category-btn{
-  background: rgba(76,175,136,0.8); /* napůl průhledné */
+  background: rgba(76,175,136,0.8);
   color:white;
-  padding:50px 25px; /* zvětšeno */
+  padding:50px 25px;
   text-align:center;
-  font-size:1.6rem;  /* zvětšeno */
+  font-size:1.6rem;
   border-radius:20px;
   font-weight:700;
   cursor:pointer;
@@ -76,7 +72,7 @@ header .company-name{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:180px;  /* zvětšeno */
+  min-height:180px;
   width:100%;
   max-width:280px;
   box-shadow:0 6px 15px rgba(0,0,0,0.2);
@@ -95,9 +91,6 @@ header .company-name{
   .categories-container{
     grid-template-columns:1fr;
   }
-  .categories-container .row2{
-    grid-template-columns:1fr;
-  }
   .category-btn{
     min-height:140px;
     font-size:1.3rem;
@@ -111,7 +104,7 @@ header .company-name{
   margin:80px auto 40px auto;
   padding:18px 50px;
   border-radius:50px;
-  background:#397d65; /* jiná barva než ostatní tlačítka */
+  background:#397d65;
   color:white;
   font-weight:700;
   text-decoration:none;
@@ -120,7 +113,6 @@ header .company-name{
   transition:0.3s;
   box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
-
 .back-btn:hover{
   transform:scale(1.05);
   box-shadow:0 10px 25px rgba(0,0,0,0.3);
@@ -136,22 +128,18 @@ header .company-name{
 
 <h2 class="main-title">Naše nabídka</h2>
 
-<!-- první řada 4 tlačítka -->
 <div class="categories-container">
+  <!-- první řada: 4 tlačítka -->
   <a href="dorty.html" class="category-btn">Dorty</a>
   <a href="zakusky.html" class="category-btn">Zákusky</a>
   <a href="svatebni.html" class="category-btn">Svatební dorty</a>
   <a href="mini.html" class="category-btn">Mini zákusky</a>
-</div>
-
-<!-- druhá řada 3 tlačítka uprostřed -->
-<div class="categories-container row2">
+  <!-- druhá řada: 3 tlačítka, placeholdery vlevo a vpravo se postarají o zarovnání -->
   <a href="slane.html" class="category-btn">Slané</a>
   <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="rolady.html" class="category-btn">Rolády</a>
 </div>
 
-<!-- Tlačítko zpět na spodku stránky -->
 <a href="index.html" class="back-btn">Zpět</a>
 
 </body>
