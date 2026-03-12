@@ -43,27 +43,31 @@ header .company-name{
 
 /* kontejner pro tlačítka kategorií */
 .categories-container{
-  max-width:1100px;
+  max-width:1200px;
   margin:0 auto 50px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr); /* první řada 4 tlačítka */
   gap:30px;
   justify-items:center;
 }
 
-/* spodní řada uprostřed */
-.categories-container a:nth-child(n+4){
-  justify-self:center;
+/* spodní řada 3 tlačítka uprostřed */
+.categories-container .row2{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  justify-content:center;
+  margin-top:30px;
 }
 
 /* velká tlačítka kategorií */
 .category-btn{
   background: rgba(76,175,136,0.8); /* napůl průhledné */
   color:white;
-  padding:40px 20px;
+  padding:50px 25px; /* zvětšeno */
   text-align:center;
-  font-size:1.5rem;
+  font-size:1.6rem;  /* zvětšeno */
   border-radius:20px;
   font-weight:700;
   cursor:pointer;
@@ -72,12 +76,12 @@ header .company-name{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:160px;
+  min-height:180px;  /* zvětšeno */
   width:100%;
   max-width:280px;
   box-shadow:0 6px 15px rgba(0,0,0,0.2);
-  border:2px solid rgba(0,0,0,0.1); /* okraj */
-  background-image: linear-gradient(to bottom right, rgba(76,175,136,0.8), rgba(0,0,0,0.1)); /* kreativní přechod */
+  border:2px solid rgba(0,0,0,0.1);
+  background-image: linear-gradient(to bottom right, rgba(76,175,136,0.8), rgba(0,0,0,0.1));
 }
 
 .category-btn:hover{
@@ -90,7 +94,9 @@ header .company-name{
 @media(max-width:768px){
   .categories-container{
     grid-template-columns:1fr;
-    gap:20px;
+  }
+  .categories-container .row2{
+    grid-template-columns:1fr;
   }
   .category-btn{
     min-height:140px;
@@ -130,16 +136,22 @@ header .company-name{
 
 <h2 class="main-title">Naše nabídka</h2>
 
+<!-- první řada 4 tlačítka -->
 <div class="categories-container">
   <a href="dorty.html" class="category-btn">Dorty</a>
   <a href="zakusky.html" class="category-btn">Zákusky</a>
   <a href="svatebni.html" class="category-btn">Svatební dorty</a>
   <a href="mini.html" class="category-btn">Mini zákusky</a>
+</div>
+
+<!-- druhá řada 3 tlačítka uprostřed -->
+<div class="categories-container row2">
   <a href="slane.html" class="category-btn">Slané</a>
   <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="rolady.html" class="category-btn">Rolády</a>
 </div>
 
+<!-- Tlačítko zpět na spodku stránky -->
 <a href="index.html" class="back-btn">Zpět</a>
 
 </body>
