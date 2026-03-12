@@ -204,3 +204,48 @@ justify-content:center;
 gap:20px;
 font-size:28px;
 }
+
+/* kategorie */
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.category-btn{
+background:#5a3e36;
+color:white;
+padding:25px;
+text-align:center;
+font-size:1.2rem;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.category-btn:hover{
+background:#4caf88;
+transform:scale(1.05);
+}
+
+/* galerie pod tlačítkem kategorie */
+.gallery{
+display:none;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+.gallery img{
+width:200px;
+height:150px;
+object-fit:cover;
+border-radius:10px;
+transition:0.25s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
