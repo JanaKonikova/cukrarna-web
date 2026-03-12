@@ -39,24 +39,24 @@ header .company-name{
   color:#5a3e36;
 }
 
-/* flexbox kontejner pro tlačítka */
+/* grid pro tlačítka */
 .categories-container{
   max-width:1200px;
   margin:0 auto 50px auto;
   padding:0 20px;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  gap:30px 20px;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:25px;
+  justify-items:center;
 }
 
 /* tlačítka */
 .category-btn{
   background: rgba(76,175,136,0.8);
   color:white;
-  padding:50px 25px;
+  padding:35px 20px; /* menší padding, aby se vešla 4 na řádek */
   text-align:center;
-  font-size:1.6rem;
+  font-size:1.4rem;  /* menší font */
   border-radius:20px;
   font-weight:700;
   cursor:pointer;
@@ -65,9 +65,9 @@ header .company-name{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:180px;
-  flex:1 1 calc(25% - 20px); /* 4 tlačítka na řádek, mezera mezi nimi */
-  max-width:280px;
+  min-height:160px;  /* menší výška */
+  width:100%;
+  max-width:250px;
   box-shadow:0 6px 15px rgba(0,0,0,0.2);
   border:2px solid rgba(0,0,0,0.1);
   background-image: linear-gradient(to bottom right, rgba(76,175,136,0.8), rgba(0,0,0,0.1));
@@ -81,16 +81,15 @@ header .company-name{
 
 /* mobilní verze */
 @media(max-width:1024px){
-  .category-btn{
-    flex:1 1 calc(50% - 20px); /* 2 tlačítka na řádek */
+  .categories-container{
+    grid-template-columns:repeat(2,1fr); /* 2 tlačítka na tablet */
   }
 }
 @media(max-width:768px){
   .categories-container{
-    justify-content:center;
+    grid-template-columns:1fr; /* 1 tlačítko na mobil */
   }
   .category-btn{
-    flex:1 1 100%; /* 1 tlačítko na řádek */
     max-width:90%;
   }
 }
@@ -126,13 +125,13 @@ header .company-name{
 <h2 class="main-title">Naše nabídka</h2>
 
 <div class="categories-container">
-  <!-- první řada: 4 tlačítka -->
+  <!-- první řada -->
   <a href="dorty.html" class="category-btn">Dorty</a>
   <a href="zakusky.html" class="category-btn">Zákusky</a>
   <a href="svatebni.html" class="category-btn">Svatební dorty</a>
   <a href="mini.html" class="category-btn">Mini zákusky</a>
 
-  <!-- druhá řada: 4 tlačítka -->
+  <!-- druhá řada -->
   <a href="slane.html" class="category-btn">Slané</a>
   <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="rolady.html" class="category-btn">Rolády</a>
