@@ -1,152 +1,44 @@
-/* --- Reset a font --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+/* Reset */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+body {background:#fdf7f0;color:#5a3e36;line-height:1.6;}
+.container {width:90%;max-width:1200px;margin:0 auto;}
+h2 {text-align:center;margin-bottom:40px;color:#5a3e36;}
+a {text-decoration:none;}
 
-body {
-    background: #fdf7f0;
-    color: #5a3e36;
-}
+/* Header */
+header {background:#fff8f2;padding:15px 0;position:sticky;top:0;z-index:100;}
+.header-container {display:flex;justify-content:space-between;align-items:center;}
+.logo {font-size:1.8rem;font-weight:700;}
+.hamburger {display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;}
+.hamburger span{display:block;height:3px;background:#5a3e36;width:25px;border-radius:2px;}
+nav ul {display:flex;gap:20px;list-style:none;}
+nav a {color:#5a3e36;font-weight:600;transition:0.3s;}
+nav a:hover{color:#4caf88;}
 
-/* --- Header & Nav --- */
-header {
-    background: #fff8f2;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+/* Hero */
+.hero{text-align:center;padding:80px 20px;background:#fff8f2;}
+.hero h2{font-size:2.8rem;margin-bottom:15px;}
+.btn-primary{background:#4caf88;color:#fff;padding:12px 30px;border-radius:30px;font-weight:600;}
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+/* Sections & Cards */
+section{padding:60px 0;}
+.cards,.about-grid,.team-grid,.reviews-grid{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;}
+.card,.about-card,.team-member,.review{background:#fff;border-radius:12px;padding:15px;max-width:300px;box-shadow:0 5px 15px rgba(0,0,0,0.05);text-align:center;}
+.card img,.team-member img{width:100%;height:200px;object-fit:cover;}
+.review{font-style:italic;padding:20px;}
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #5a3e36;
-}
+/* Contact */
+.contact p{text-align:center;margin-bottom:8px;}
+.map iframe{border:0;border-radius:12px;}
 
-.nav-toggle {
-    display: none;
-}
+/* Footer */
+footer{background:#fff8f2;text-align:center;padding:20px 0;}
+footer .socials a{margin:0 8px;color:#5a3e36;}
+footer .socials a:hover{color:#4caf88;}
 
-.nav-toggle-label {
-    display: none;
-    cursor: pointer;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #5a3e36;
-    font-weight: 600;
-    transition: 0.3s;
-}
-nav a:hover {
-    color: #4caf88;
-}
-
-/* --- Hero --- */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #fff8f2;
-}
-.hero h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-}
-.btn-primary {
-    background: #4caf88;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-}
-
-/* --- Sections --- */
-section {
-    padding: 60px 0;
-}
-h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    color: #5a3e36;
-}
-
-/* --- Cards & Grids --- */
-.cards, .about-grid, .team-grid, .reviews-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-}
-
-.card, .about-card, .team-member, .review {
-    background: #fff;
-    border-radius: 12px;
-    padding: 15px;
-    max-width: 300px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
-}
-.review {
-    font-style: italic;
-    padding: 20px;
-}
-.team-member img, .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* --- Contact & Map --- */
-.contact p {
-    text-align: center;
-    margin-bottom: 8px;
-}
-.map iframe {
-    border: 0;
-    border-radius: 12px;
-}
-
-/* --- Footer --- */
-footer {
-    background: #fff8f2;
-    text-align: center;
-    padding: 20px 0;
-}
-footer .socials a {
-    margin: 0 8px;
-    text-decoration: none;
-    color: #5a3e36;
-}
-footer .socials a:hover {
-    color: #4caf88;
-}
-
-/* --- Responsive Styles --- */
-@media(max-width: 768px) {
-    .nav-toggle-label {
-        display: block;
-    }
-    .nav-menu {
-        flex-direction: column;
-        display: none;
-    }
-    .nav-toggle:checked + .nav-toggle-label + nav .nav-menu {
-        display: flex;
-    }
+/* Responsive */
+@media(max-width:768px){
+  .hamburger{display:flex;}
+  nav ul{flex-direction:column;display:none;}
+  nav ul.show{display:flex;}
 }
