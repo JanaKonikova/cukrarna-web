@@ -1,10 +1,7 @@
-// Smooth scroll pro všechny odkazy v navigaci
-const links = document.querySelectorAll('nav a');
-
-links.forEach(link => {
+// Smooth scroll
+document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
 });
