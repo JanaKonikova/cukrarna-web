@@ -10,9 +10,6 @@ body{
   margin:0;
   padding:0;
   background:#fffaf0;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
 }
 
 /* horní pruh */
@@ -41,11 +38,11 @@ header .company-name{
 
 /* grid pro tlačítka */
 .categories-container{
-  max-width:1600px;
+  max-width:1200px;
   margin:0 auto 50px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns:repeat(4,1fr); /* 4 tlačítka na řádek */
   gap:25px;
   justify-items:center;
 }
@@ -54,9 +51,9 @@ header .company-name{
 .category-btn{
   background: rgba(76,175,136,0.8);
   color:white;
-  padding:35px 20px; /* menší padding, aby se vešla 4 na řádek */
+  padding:40px 10px;
   text-align:center;
-  font-size:1.4rem;  /* menší font */
+  font-size:1.4rem;
   border-radius:20px;
   font-weight:700;
   cursor:pointer;
@@ -65,9 +62,8 @@ header .company-name{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:160px;  /* menší výška */
-  width:100%;
-  max-width:250px;
+  min-height:150px;
+  width:100%; /* každé tlačítko zabere přesně 1 sloupec gridu */
   box-shadow:0 6px 15px rgba(0,0,0,0.2);
   border:2px solid rgba(0,0,0,0.1);
   background-image: linear-gradient(to bottom right, rgba(76,175,136,0.8), rgba(0,0,0,0.1));
