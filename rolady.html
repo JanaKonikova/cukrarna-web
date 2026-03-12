@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dorty</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.gallery-container{
+max-width:1100px;
+margin:50px auto;
+padding:0 20px;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.gallery-container img{
+width:200px;
+height:150px;
+object-fit:cover;
+border-radius:12px;
+transition:0.25s;
+cursor:pointer;
+}
+
+.gallery-container img:hover{
+transform:scale(1.05);
+}
+
+.back-btn{
+display:block;
+margin:30px auto;
+padding:12px 30px;
+border-radius:50px;
+background:#4caf88;
+color:white;
+font-weight:700;
+text-decoration:none;
+transition:0.3s;
+text-align:center;
+}
+
+.back-btn:hover{
+background:#397d65;
+transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1 style="text-align:center;margin-top:30px;">Dorty</h1>
+</header>
+
+<div class="gallery-container">
+  <img src="/images/" alt="Rolada 1">
+  <img src="/images/" alt="Rolada 2">
+  <img src="/images/" alt="Rolada 3">
+  <!-- sem můžeš doplnit další obrázky -->
+</div>
+
+<a href="nabidka.html" class="back-btn">Zpět</a>
+
+</body>
+</html>
