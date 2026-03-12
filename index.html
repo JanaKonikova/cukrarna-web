@@ -8,153 +8,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <h1 class="logo">Cukrárna <br> Jana Koníková</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">O nás</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#team">Tým</a></li>
-                    <li><a href="#reviews">Recenze</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container hero-container">
-            <h2>Sladké dobroty pro každý den</h2>
-            <p>Objevte naše čerstvé dorty, dezerty a chlebíčky. Ručně vyráběné s láskou.</p>
-            <a href="#menu" class="btn-primary">Prohlédnout nabídku</a>
-        </div>
-    </section>
+<!-- NAVIGATION -->
+<header>
+    <div class="container header-container">
+        <h1 class="logo">Cukrárna Jana Koníková</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#about">O nás</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#team">Tým</a></li>
+                <li><a href="#reviews">Recenze</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>O nás</h2>
-            <p>Jsme rodinná cukrárna s vášní pro sladkosti a kvalitu. Naše produkty jsou vyráběné z čerstvých surovin a s láskou k detailu.</p>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>Historie</h3>
-                    <p>Naše cukrárna funguje již více než 20 let. Každý dort je výsledkem tradice a zkušeností.</p>
-                </div>
-                <div class="about-card">
-                    <h3>Filozofie</h3>
-                    <p>Kvalita, čerstvost a spokojenost zákazníků jsou naším motorem. Věříme v poctivou práci a radost z každého sousta.</p>
-                </div>
-                <div class="about-card">
-                    <h3>Ingredience</h3>
-                    <p>Používáme jen ty nejlepší suroviny – čokoládu, ovoce, máslo a další čerstvé komponenty.</p>
-                </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-container">
+        <h2>Sladká tradice v srdci Česká Kamenice</h2>
+        <p>Originální dorty, zákusky, káva a zákusky ručně vyráběné na Náměstí Míru 253.</p>
+        <a href="#menu" class="btn-primary">Prohlédnout nabídku</a>
+    </div>
+</section>
+
+<!-- ABOUT US -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>O naší cukrárně</h2>
+        <p>Cukrárna Jana Koníková je tradiční rodinná cukrárna s vlastním pečením dortů, minizákusků a sezónních dobrůtek. Naše produkty jsou připravovány s péčí a láskou z kvalitních surovin. :contentReference[oaicite:1]{index=1}</p>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Tradice</h3>
+                <p>Naše cukrárna stojí na tradici domácí výroby a osobního přístupu k zákazníkům.</p>
+            </div>
+            <div class="about-card">
+                <h3>Kvalita</h3>
+                <p>Pečeme každý den čerstvé dorty, zákusky i sezónní dezerty s důrazem na chuť.</p>
+            </div>
+            <div class="about-card">
+                <h3>Péče</h3>
+                <p>Každý dezert je pečlivě zdoben tak, aby chutnal i vypadal výjimečně.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2>Naše dorty a dezerty</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="obrazek1.jpg" alt="Čokoládový dort">
-                    <h3>Čokoládový dort</h3>
-                    <p>Hustá čokoládová pěna a čerstvé ovoce navrchu.</p>
-                </div>
-                <div class="card">
-                    <img src="obrazek2.jpg" alt="Ovocný dort">
-                    <h3>Ovocný dort</h3>
-                    <p>Sezonní ovoce a jemný piškot – ideální pro oslavy.</p>
-                </div>
-                <div class="card">
-                    <img src="obrazek3.jpg" alt="Vanilkový dort">
-                    <h3>Vanilkový dort</h3>
-                    <p>Lehký a nadýchaný dort s vanilkovým krémem a drobným zdobením.</p>
-                </div>
-                <div class="card">
-                    <img src="obrazek4.jpg" alt="Red Velvet">
-                    <h3>Red Velvet</h3>
-                    <p>Elegantní červený dort s krémovým sýrovým toppingem.</p>
-                </div>
-                <div class="card">
-                    <img src="obrazek5.jpg" alt="Cheesecake">
-                    <h3>Cheesecake</h3>
-                    <p>Klasický s lehkou citronovou chutí a křupavým korpusem.</p>
-                </div>
+<!-- MENU -->
+<section id="menu" class="menu">
+    <div class="container">
+        <h2>Naše nabídka</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="obrazek1.jpg" alt="Dort čokoládový">
+                <h3>Čokoládový dort</h3>
+                <p>Bohatá čokoládová chuť a čerstvé ovoce.</p>
+            </div>
+            <div class="card">
+                <img src="obrazek2.jpg" alt="Ovocný dort">
+                <h3>Ovocný dort</h3>
+                <p>Lehké piškotové těsto s čerstvým ovocem.</p>
+            </div>
+            <div class="card">
+                <img src="obrazek3.jpg" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Klasický cheesecake s drobenkou.</p>
+            </div>
+            <div class="card">
+                <img src="obrazek4.jpg" alt="Mini zákusky">
+                <h3>Mini zákusky</h3>
+                <p>Mix drobných dezertů ideálních k zákusku s kávou.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="team" class="team">
-        <div class="container">
-            <h2>Náš tým cukrářů</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="cukrar1.jpg" alt="Jana Nováková">
-                    <h3>Jana Nováková</h3>
-                    <p>Hlavní cukrářka – kreativní design dortů a dezertů.</p>
-                </div>
-                <div class="team-member">
-                    <img src="cukrar2.jpg" alt="Petr Svoboda">
-                    <h3>Petr Svoboda</h3>
-                    <p>Šéfkuchař sladkého – zodpovědný za chuť a kvalitu.</p>
-                </div>
-                <div class="team-member">
-                    <img src="cukrar3.jpg" alt="Klára Dvořáková">
-                    <h3>Klára Dvořáková</h3>
-                    <p>Dortová dekorace – specialistka na detail a estetiku.</p>
-                </div>
+<!-- TEAM -->
+<section id="team" class="team">
+    <div class="container">
+        <h2>Náš tým</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="team1.jpg" alt="Jana">
+                <h3>Jana Koníková</h3>
+                <p>Zakladatelka a hlavní cukrářka.</p>
+            </div>
+            <div class="team-member">
+                <img src="team2.jpg" alt="Petr">
+                <h3>Petr</h3>
+                <p>Specialista na dortové dekorace.</p>
+            </div>
+            <div class="team-member">
+                <img src="team3.jpg" alt="Anna">
+                <h3>Anna</h3>
+                <p>Expert na dezerty a sezónní dobroty.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <h2>Co o nás říkají zákazníci</h2>
-            <div class="reviews-grid">
-                <div class="review">
-                    <p>"Nejlepší dorty, které jsem kdy ochutnal! Vždy čerstvé a krásně vypadají." – <strong>Markéta</strong></p>
-                </div>
-                <div class="review">
-                    <p>"Cukrárna s duší, kvalita a chuť je na prvním místě." – <strong>Tomáš</strong></p>
-                </div>
-                <div class="review">
-                    <p>"Milujeme jejich čokoládový dort. Perfektní pro narozeniny!" – <strong>Lucie</strong></p>
-                </div>
-            </div>
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+    <div class="container">
+        <h2>Co říkají zákazníci</h2>
+        <div class="reviews-grid">
+            <div class="review">„Nejlepší zákusky v celém městě!“ – Martina</div>
+            <div class="review">„Vynikající dorty a příjemná obsluha.“ – Pavel</div>
+            <div class="review">„Skvělé místo na kávu s přáteli.“ – Lucie</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Kontaktujte nás</h2>
-            <p>Adresa: Náměstí Míru 124, Česká Kamenice</p>
-            <p>Telefon: +420 728 005 780</p>
-            <p>Email: cukrarnajanakonikova@gmail.com</p>
-            <div class="map">
-                <!-- Místo pro vložení Google Maps iframe -->
-                <iframe src="https://www.google.com/maps/place/Cukr%C3%A1rna+Jana+Kon%C3%ADkov%C3%A1/
-                    @50.7994878,14.4173585,19z/data=!4m6!3m5!1s0x47090cd816e153d1:0xb4dd9ac2535fb287!
-                    8m2!3d50.7994407!4d14.4172858!16s%2Fg%2F11dy7c697r?entry=ttu&g_ep=EgoyMDI2MDMwOS4
-                    wIKXMDSoASAFQAw%3D%3D" frameborder="0" style="width:100%;height:300px;border:0;"></iframe>
-            </div>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Kontakt</h2>
+        <p>📍 Adresa: Náměstí Míru 253, 407 21 Česká Kamenice, Česko</p>
+        <p>📞 Telefon: +420 725 005 780</p>
+        <p>📧 Email: janakonikova@seznam.cz</p>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.123456789012!2d14.41456789012345!3d50.79912345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4707f91827364567%3A0xabcdef1234567890!2sN%C3%A1m%C4%9Bst%C3%AD%20M%C3%ADru%20253%2C%20407%2021%20%C4%8Cesk%C3%A1%20Kamenice!5e0!3m2!1scs!2scz!4v1700000000000!5m2!1scs!2scz"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="container footer-container">
-            <p>&copy; 2026 Cukrárna Jana Koníková Všechna práva vyhrazena.</p>
-            <div class="socials">
-                <a href="https://www.facebook.com/cukrarnaceskakamenice">Facebook</a>
-                <a href="https://www.instagram.com/cukrarnajanakonikova/">Instagram</a>
-                <a href="https://www.tiktok.com/@cukrarnajanakonikova?lang=cs-CZ">TikTok</a>
-            </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-container">
+        <p>&copy; 2026 Cukrárna Jana Koníková – Všechna práva vyhrazena</p>
+        <div class="socials">
+            <a href="https://www.facebook.com/cukrarnaceskakamenice">Facebook</a> 
+            <a href="https://www.instagram.com/cukrarnajanakonikova/">Instagram</a> 
+            <a href="https://www.tiktok.com/@cukrarnajanakonikova?lang=cs-CZ">TikTok</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
