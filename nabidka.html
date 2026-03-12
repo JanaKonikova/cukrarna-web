@@ -20,7 +20,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  background:#f5f0e6;
+  background:#f5f0e6; /* lehce tmavší než zbytek */
   color:#5a3e36;
   padding:15px 30px;
   box-shadow:0 2px 5px rgba(0,0,0,0.1);
@@ -30,7 +30,7 @@ header .company-name{
   font-size:1.5rem;
 }
 
-/* hlavní nadpis */
+/* nadpis hlavní sekce */
 .main-title{
   text-align:center;
   font-size:2.5rem;
@@ -39,25 +39,18 @@ header .company-name{
   color:#5a3e36;
 }
 
-/* hlavní grid pro všechny tlačítka */
+/* grid pro tlačítka */
 .categories-container{
   max-width:1200px;
   margin:0 auto 50px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4,1fr); /* 4 sloupce */
   gap:30px;
   justify-items:center;
 }
 
-/* placeholder pro spodní řadu (prázdné místo vlevo a vpravo) */
-.categories-container::before,
-.categories-container::after{
-  content:"";
-  display:block;
-}
-
-/* velká tlačítka */
+/* tlačítka */
 .category-btn{
   background: rgba(76,175,136,0.8);
   color:white;
@@ -134,10 +127,13 @@ header .company-name{
   <a href="zakusky.html" class="category-btn">Zákusky</a>
   <a href="svatebni.html" class="category-btn">Svatební dorty</a>
   <a href="mini.html" class="category-btn">Mini zákusky</a>
-  <!-- druhá řada: 3 tlačítka, placeholdery vlevo a vpravo se postarají o zarovnání -->
+
+  <!-- druhá řada: 3 tlačítka s placeholdery vlevo a vpravo -->
+  <div></div> <!-- prázdné místo vlevo -->
   <a href="slane.html" class="category-btn">Slané</a>
   <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="rolady.html" class="category-btn">Rolády</a>
+  <div></div> <!-- prázdné místo vpravo -->
 </div>
 
 <a href="index.html" class="back-btn">Zpět</a>
