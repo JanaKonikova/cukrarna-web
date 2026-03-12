@@ -30,7 +30,7 @@ header .company-name{
   font-size:1.5rem;
 }
 
-/* hlavní nadpis */
+/* nadpis hlavní sekce */
 .main-title{
   text-align:center;
   font-size:2.5rem;
@@ -39,15 +39,15 @@ header .company-name{
   color:#5a3e36;
 }
 
-/* grid pro tlačítka */
+/* flexbox kontejner pro tlačítka */
 .categories-container{
   max-width:1200px;
   margin:0 auto 50px auto;
   padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr); /* 4 sloupce */
-  gap:40px 30px; /* větší mezery mezi tlačítky */
-  justify-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:30px 20px;
 }
 
 /* tlačítka */
@@ -66,7 +66,7 @@ header .company-name{
   align-items:center;
   justify-content:center;
   min-height:180px;
-  width:100%;
+  flex:1 1 calc(25% - 20px); /* 4 tlačítka na řádek, mezera mezi nimi */
   max-width:280px;
   box-shadow:0 6px 15px rgba(0,0,0,0.2);
   border:2px solid rgba(0,0,0,0.1);
@@ -80,15 +80,18 @@ header .company-name{
 }
 
 /* mobilní verze */
+@media(max-width:1024px){
+  .category-btn{
+    flex:1 1 calc(50% - 20px); /* 2 tlačítka na řádek */
+  }
+}
 @media(max-width:768px){
   .categories-container{
-    grid-template-columns:1fr;
-    gap:20px;
+    justify-content:center;
   }
   .category-btn{
-    min-height:140px;
-    font-size:1.3rem;
-    max-width:100%;
+    flex:1 1 100%; /* 1 tlačítko na řádek */
+    max-width:90%;
   }
 }
 
@@ -129,7 +132,7 @@ header .company-name{
   <a href="svatebni.html" class="category-btn">Svatební dorty</a>
   <a href="mini.html" class="category-btn">Mini zákusky</a>
 
-  <!-- druhá řada: 4 tlačítka (přidáno Beranci) -->
+  <!-- druhá řada: 4 tlačítka -->
   <a href="slane.html" class="category-btn">Slané</a>
   <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="rolady.html" class="category-btn">Rolády</a>
