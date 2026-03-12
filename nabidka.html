@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celá nabídka</title>
+<style>
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: Arial, sans-serif;
+  background:#fffaf0;
+  display:flex;
+  flex-direction:column;
+}
+
+/* header */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  background:#f5f0e6;
+  color:#5a3e36;
+  padding:15px 30px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+header .company-name{
+  font-weight:700;
+  font-size:1.5rem;
+}
+
+/* wrapper obsahu */
+.main-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start; /* tlačítko dole */
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px;
+}
+
+/* hlavní nadpis */
+.main-title{
+  text-align:center;
+  font-size:2.5rem;
+  font-weight:700;
+  margin:40px 0 30px 0;
+  color:#5a3e36;
+}
+
+/* grid tlačítek */
+.categories-container{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:25px;
+  justify-items:center;
+  margin-bottom:40px;
+}
+
+.category-btn{
+  background: rgba(76,175,136,0.8);
+  color:white;
+  padding:35px 10px;
+  font-size:1.4rem;
+  font-weight:700;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:150px;
+  width:100%;
+  max-width:220px; /* menší max-width, už se nevejde přes celou šířku */
+  text-decoration:none;
+  border:2px solid rgba(0,0,0,0.1);
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(to bottom right, rgba(76,175,136,0.8), rgba(0,0,0,0.1));
+  transition:0.3s;
+}
+
+.category-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  background-image: linear-gradient(to bottom right, rgba(76,175,136,1), rgba(0,0,0,0.2));
+}
+
+/* back button dole */
+.back-btn{
+  display:block;
+  margin-top:auto; /* flex posune dolů */
+  padding:15px 40px;
+  border-radius:50px;
+  background:#397d65;
+  color:white;
+  font-weight:700;
+  text-decoration:none;
+  text-align:center;
+  font-size:1.2rem;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+  max-width:200px; /* aby nebyl přes celou šířku */
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:40px;
+  transition:0.3s;
+}
+.back-btn:hover{
+  background:#2e5d4a;
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* mobilní verze */
+@media(max-width:1024px){
+  .categories-container{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+@media(max-width:768px){
+  .categories-container{
+    grid-template-columns:1fr;
+  }
+  .category-btn{
+    max-width:90%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="company-name">Cukrárna Jana Koníková</div>
+</header>
+
+<div class="main-content">
+  <h2 class="main-title">Naše nabídka</h2>
+
+  <div class="categories-container">
+    <a href="dorty.html" class="category-btn">Dorty</a>
+    <a href="zakusky.html" class="category-btn">Zákusky</a>
+    <a href="svatebni.html" class="category-btn">Svatební dorty</a>
+    <a href="mini.html" class="category-btn">Mini zákusky</a>
+    <a href="slane.html" class="category-btn">Slané</a>
+    <a href="cukrovi.html" class="category-btn">Cukroví</a>
+    <a href="rolady.html" class="category-btn">Rolády</a>
+    <a href="beranci.html" class="category-btn">Beranci</a>
+  </div>
+
+  <a href="index.html" class="back-btn">Zpět</a>
+</div>
+
+</body>
+</html>

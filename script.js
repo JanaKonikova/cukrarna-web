@@ -34,3 +34,28 @@ behavior: "smooth"
 });
 
 });
+// Zobrazit další / zpět
+const showMoreBtn = document.getElementById('showMoreBtn');
+const backBtn = document.getElementById('backBtn');
+const mainCakes = document.getElementById('main-cakes');
+const categoriesSection = document.getElementById('categories-section');
+
+showMoreBtn.addEventListener('click', e => {
+  e.preventDefault();
+  mainCakes.style.display = 'none';
+  categoriesSection.style.display = 'block';
+});
+
+backBtn.addEventListener('click', e => {
+  e.preventDefault();
+  categoriesSection.style.display = 'none';
+  mainCakes.style.display = 'block';
+});
+
+// klik na kategorii → zobrazí/skrýt galerii
+document.querySelectorAll('.category-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const gallery = btn.nextElementSibling;
+    gallery.style.display = (gallery.style.display==='flex') ? 'none' : 'flex';
+  });
+});
