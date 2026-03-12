@@ -1,8 +1,3 @@
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.querySelector('nav ul');
-hamburger.addEventListener('click', ()=>{navMenu.classList.toggle('show');});
-
 // Smooth scroll
 document.querySelectorAll('nav a').forEach(link=>{
     link.addEventListener('click',e=>{
@@ -11,3 +6,12 @@ document.querySelectorAll('nav a').forEach(link=>{
         navMenu.classList.remove('show'); // zavře menu po kliknutí
     });
 });
+// Button
+const btn = document.getElementById("menuBtn")
+const menu = document.getElementById("menu")
+
+btn.onclick = () => {
+
+menu.classList.toggle("active")
+
+}
