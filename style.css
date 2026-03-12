@@ -172,3 +172,15 @@ font-size:1.6rem;
 }
 
 }
+.social-nav a,
+.contact-social a{
+color:#5a3e36;
+font-size:22px;
+transition:0.25s;
+}
+
+.social-nav a:hover,
+.contact-social a:hover{
+color:#4caf88;
+transform:scale(1.15);
+}
