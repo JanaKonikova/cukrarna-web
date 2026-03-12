@@ -6,23 +6,31 @@
 <title>Celá nabídka</title>
 <link rel="stylesheet" href="style.css">
 <style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background:#fffaf0;
+}
+
 /* kontejner pro tlačítka kategorií */
 .categories-container{
-  max-width:1100px;
+  max-width:1200px;
   margin:50px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  /* “přeházená” mřížka: první řádek 2x větší, pak 3x menší */
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
 }
 
 /* velká tlačítka kategorií */
 .category-btn{
-  background:linear-gradient(135deg, #5a3e36, #4caf88);
+  background:#4caf88;
   color:white;
-  padding:35px 20px;
+  padding:40px 20px;
   text-align:center;
-  font-size:1.4rem;
+  font-size:1.5rem;
   border-radius:20px;
   font-weight:700;
   cursor:pointer;
@@ -31,7 +39,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:120px;
+  min-height:160px;
 }
 
 .category-btn:hover{
@@ -45,19 +53,24 @@
     grid-template-columns:1fr;
     gap:20px;
   }
+  .category-btn{
+    min-height:140px;
+    font-size:1.3rem;
+  }
 }
 
 /* tlačítko zpět */
 .back-btn{
   display:block;
-  margin:40px auto 0 auto;
-  padding:12px 30px;
+  margin:60px auto;
+  padding:18px 50px;
   border-radius:50px;
   background:#4caf88;
   color:white;
   font-weight:700;
   text-decoration:none;
   text-align:center;
+  font-size:1.3rem;
   transition:0.3s;
 }
 
@@ -76,11 +89,11 @@
 <div class="categories-container">
 
   <a href="dorty.html" class="category-btn">Dorty</a>
-  <a href="svatebni.html" class="category-btn">Svatební dorty</a>
-  <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="zakusky.html" class="category-btn">Zákusky</a>
+  <a href="svatebni.html" class="category-btn">Svatební dorty</a>
   <a href="mini.html" class="category-btn">Mini zákusky</a>
   <a href="slane.html" class="category-btn">Slané</a>
+  <a href="cukrovi.html" class="category-btn">Cukroví</a>
   <a href="rolady.html" class="category-btn">Rolády</a>
 
 </div>
