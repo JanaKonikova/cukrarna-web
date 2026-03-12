@@ -11,6 +11,32 @@ body{
   margin:0;
   padding:0;
   background:#fffaf0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* horní pruh */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#5a3e36;
+  color:white;
+  padding:15px 30px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1{
+  margin:0;
+  text-align:center;
+  flex:1;
+  font-size:1.8rem;
+}
+
+header .company-name{
+  font-weight:700;
+  font-size:1.5rem;
 }
 
 /* kontejner pro tlačítka kategorií */
@@ -19,9 +45,14 @@ body{
   margin:50px auto;
   padding:0 20px;
   display:grid;
-  /* “přeházená” mřížka: první řádek 2x větší, pak 3x menší */
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:25px;
+  justify-items:center;
+}
+
+/* spodní 3 tlačítka uprostřed */
+.categories-container a:nth-child(n+5){
+  justify-self:center;
 }
 
 /* velká tlačítka kategorií */
@@ -40,11 +71,12 @@ body{
   align-items:center;
   justify-content:center;
   min-height:160px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
 
 .category-btn:hover{
   transform:scale(1.05);
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* mobilní verze */
@@ -62,7 +94,7 @@ body{
 /* tlačítko zpět */
 .back-btn{
   display:block;
-  margin:60px auto;
+  margin:60px auto 40px auto;
   padding:18px 50px;
   border-radius:50px;
   background:#4caf88;
@@ -72,18 +104,22 @@ body{
   text-align:center;
   font-size:1.3rem;
   transition:0.3s;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
 
 .back-btn:hover{
   background:#397d65;
   transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 <body>
 
 <header>
-  <h1 style="text-align:center;margin-top:30px;">Naše nabídka</h1>
+  <div class="company-name">Cukrárna Jana Koníková</div>
+  <h1>Naše nabídka</h1>
+  <div style="width:150px"></div> <!-- pro vyrovnání -->
 </header>
 
 <div class="categories-container">
@@ -98,7 +134,7 @@ body{
 
 </div>
 
-<!-- Tlačítko zpět -->
+<!-- Tlačítko zpět na spodku stránky -->
 <a href="index.html" class="back-btn">Zpět</a>
 
 </body>
