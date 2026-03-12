@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celá nabídka</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* kontejner pro tlačítka kategorií */
+.categories-container{
+  max-width:1100px;
+  margin:50px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+}
+
+/* velká tlačítka kategorií */
+.category-btn{
+  background:linear-gradient(135deg, #5a3e36, #4caf88);
+  color:white;
+  padding:35px 20px;
+  text-align:center;
+  font-size:1.4rem;
+  border-radius:20px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:120px;
+}
+
+.category-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* mobilní verze */
+@media(max-width:768px){
+  .categories-container{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+}
+
+/* tlačítko zpět */
+.back-btn{
+  display:block;
+  margin:40px auto 0 auto;
+  padding:12px 30px;
+  border-radius:50px;
+  background:#4caf88;
+  color:white;
+  font-weight:700;
+  text-decoration:none;
+  text-align:center;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  background:#397d65;
+  transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 style="text-align:center;margin-top:30px;">Naše nabídka</h1>
+</header>
+
+<div class="categories-container">
+
+  <a href="dorty.html" class="category-btn">Dorty</a>
+  <a href="svatebni.html" class="category-btn">Svatební dorty</a>
+  <a href="cukrovi.html" class="category-btn">Cukroví</a>
+  <a href="zakusky.html" class="category-btn">Zákusky</a>
+  <a href="mini.html" class="category-btn">Mini zákusky</a>
+  <a href="slane.html" class="category-btn">Slané</a>
+  <a href="rolady.html" class="category-btn">Rolády</a>
+
+</div>
+
+<!-- Tlačítko zpět -->
+<a href="index.html" class="back-btn">Zpět</a>
+
+</body>
+</html>
